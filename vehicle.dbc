@@ -1,0 +1,15 @@
+VERSION ""
+
+NS_ :
+
+BS_:
+
+BU_: ECU CLUSTER DIAG_TOOL
+
+BO_ 256 EngineData: 8 ECU
+ SG_ EngineSpeed : 0|16@1+ (0.25,0) [0|8000] "rpm" CLUSTER,DIAG_TOOL
+ SG_ VehicleSpeed : 16|8@1+ (1,0) [0|250] "km/h" CLUSTER,DIAG_TOOL
+ SG_ ThrottlePosition : 24|8@1+ (0.392157,0) [0|100] "%" DIAG_TOOL
+ SG_ CoolantTemperature : 32|8@1+ (1,-40) [-40|215] "degC" CLUSTER,DIAG_TOOL
+ SG_ EngineLoad : 40|8@1+ (0.392157,0) [0|100] "%" DIAG_TOOL
+ SG_ FuelFlowRate : 48|16@1+ (0.01,0) [0|650] "L/h" DIAG_TOOL
