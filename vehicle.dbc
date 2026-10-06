@@ -4,12 +4,53 @@ NS_ :
 
 BS_:
 
-BU_: ECU CLUSTER DIAG_TOOL
+BU_: ECU SHVS_CTRL CLUSTER DIAG_TOOL
 
-BO_ 256 EngineData: 8 ECU
+BO_ 256 ECM_EngineGeneralStatus: 8 ECU
  SG_ EngineSpeed : 0|16@1+ (0.25,0) [0|8000] "rpm" CLUSTER,DIAG_TOOL
  SG_ VehicleSpeed : 16|8@1+ (1,0) [0|250] "km/h" CLUSTER,DIAG_TOOL
  SG_ ThrottlePosition : 24|8@1+ (0.392157,0) [0|100] "%" DIAG_TOOL
  SG_ CoolantTemperature : 32|8@1+ (1,-40) [-40|215] "degC" CLUSTER,DIAG_TOOL
  SG_ EngineLoad : 40|8@1+ (0.392157,0) [0|100] "%" DIAG_TOOL
  SG_ FuelFlowRate : 48|16@1+ (0.01,0) [0|650] "L/h" DIAG_TOOL
+
+BO_ 261 ECM_DynamicEngineKinetics: 8 ECU
+ SG_ EngineTorque : 0|12@1+ (0.1,0) [0|200] "Nm" CLUSTER,DIAG_TOOL
+ SG_ ManifoldAirPressure : 12|8@1+ (1,0) [0|255] "kPa" DIAG_TOOL
+ SG_ IntakeAirTemperature : 20|8@1+ (1,-40) [-40|215] "degC" DIAG_TOOL
+ SG_ LambdaAirFuelRatio : 28|12@1+ (0.001,0) [0|4] "lambda" DIAG_TOOL
+ SG_ SparkAdvance : 40|8@1+ (0.5,-64) [-64|63.5] "degCA" DIAG_TOOL
+ SG_ KnockRetard : 48|8@1+ (0.1,0) [0|25.5] "degCA" DIAG_TOOL
+ SG_ EngineRunState : 56|4@1+ (1,0) [0|15] "state" CLUSTER,DIAG_TOOL
+ SG_ MIL_Status : 60|1@1+ (1,0) [0|1] "flag" CLUSTER,DIAG_TOOL
+
+BO_ 512 SHVS_HybridStatus: 8 SHVS_CTRL
+ SG_ ISG_OperationalMode : 0|3@1+ (1,0) [0|7] "mode" CLUSTER,DIAG_TOOL
+ SG_ ISG_TorqueAssist : 3|10@1+ (0.1,-50) [-50|50] "Nm" CLUSTER,DIAG_TOOL
+ SG_ ISG_Current : 13|11@1+ (0.1,-100) [-100|100] "A" DIAG_TOOL
+ SG_ LiIon_BatterySOC : 24|8@1+ (0.5,0) [0|100] "%" CLUSTER,DIAG_TOOL
+ SG_ LiIon_BatteryVoltage : 32|8@1+ (0.1,0) [0|25] "V" DIAG_TOOL
+ SG_ LiIon_BatteryTemp : 40|8@1+ (1,-40) [-40|100] "degC" DIAG_TOOL
+ SG_ EnergyRecoveredTotal : 48|16@1+ (0.01,0) [0|655] "kWh" CLUSTER,DIAG_TOOL
+
+BO_ 2016 OBD2_DiagnosticRequest: 8 DIAG_TOOL
+ SG_ Req_ServiceMode : 0|8@1+ (1,0) [0|255] "" ECU
+ SG_ Req_PID : 8|8@1+ (1,0) [0|255] "" ECU
+ SG_ Req_DataA : 16|8@1+ (1,0) [0|255] "" ECU
+ SG_ Req_DataB : 24|8@1+ (1,0) [0|255] "" ECU
+ SG_ Req_DataC : 32|8@1+ (1,0) [0|255] "" ECU
+ SG_ Req_DataD : 40|8@1+ (1,0) [0|255] "" ECU
+
+BO_ 2024 OBD2_DiagnosticResponse: 8 ECU
+ SG_ Resp_ServiceMode : 0|8@1+ (1,0) [0|255] "" DIAG_TOOL
+ SG_ Resp_PID : 8|8@1+ (1,0) [0|255] "" DIAG_TOOL
+ SG_ Resp_DataA : 16|8@1+ (1,0) [0|255] "" DIAG_TOOL
+ SG_ Resp_DataB : 24|8@1+ (1,0) [0|255] "" DIAG_TOOL
+ SG_ Resp_DataC : 32|8@1+ (1,0) [0|255] "" DIAG_TOOL
+ SG_ Resp_DataD : 40|8@1+ (1,0) [0|255] "" DIAG_TOOL
+
+CM_ BO_ 256 "Maruti K15B 1.5L Primary Engine General Status (20 Hz periodic broadcast)";
+CM_ BO_ 261 "Maruti K15B Combustion Dynamics and Ignition Kinetics (50 Hz periodic broadcast)";
+CM_ BO_ 512 "Smart Hybrid Vehicle System (SHVS) Integrated Starter Generator & Li-Ion Telemetry (20 Hz)";
+CM_ BO_ 2016 "ISO 15765-4 / SAE J1979 OBD-II Diagnostic Request Frame (Client to ECU)";
+CM_ BO_ 2024 "ISO 15765-4 / SAE J1979 OBD-II Diagnostic Response Frame (ECU to Client)";

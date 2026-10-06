@@ -1,0 +1,32 @@
+# COPYRIGHT AND INTELLECTUAL PROPERTY NOTICE
+## Proprietary Portfolio Evaluation License & CC BY-NC-ND 4.0 Standard
+
+**Copyright (c) 2026 RATHLAVATH NAVEEN. All Rights Reserved.**  
+**Author / Lead Automotive Systems Engineer:** RATHLAVATH NAVEEN ([rathlavathnaveen90@gmail.com](mailto:rathlavathnaveen90@gmail.com))  
+**Repository:** [https://github.com/naveen12005/k15b-can-telemetry-emulator](https://github.com/naveen12005/k15b-can-telemetry-emulator)  
+**Project:** Suzuki / Maruti K15B 1.5L Powertrain & Smart Hybrid (SHVS) CAN Bus Telemetry Digital Twin
+
+================================================================================
+TERMS OF USE AND EVALUATION LICENSE
+================================================================================
+
+### 1. PERMITTED USE (PORTFOLIO EVALUATION & RECRUITMENT)
+Permission is hereby granted to any individual, academic evaluator, hiring manager, recruiter, or prospective employer to view, examine, inspect, and clone this repository solely for the purpose of assessing the professional qualifications, automotive software competence, and embedded systems engineering portfolio of the Author.
+
+### 2. STRICT PROHIBITION ON COPYING AND PLAGIARISM
+* **NO UNAUTHORIZED REDISTRIBUTION:** You may NOT copy, reproduce, mirror, republish, or redistribute the CAN DBC matrices (`vehicle.dbc`), powertrain plant simulation scripts, SHVS energy management models, diagnostic test suites, Word dossiers (`.docx`), or technical documentation in whole or in part without express prior written authorization from the Author.
+* **NO ACADEMIC PLAGIARISM:** You may NOT submit, present, or claim any portion of this powertrain telemetry simulator, its Mean-Value Engine Model (MVEM), or its unit test assertions as your own work for academic, university, capstone, thesis, competition, or institutional grading purposes.
+* **NO DERIVATIVE WORKS:** You may NOT alter, transform, remix, or create derivative works based on this engineering codebase.
+
+### 3. NO COMMERCIAL USE
+No commercial exploitation, embedding into production vehicle ECUs, aftermarket scan tools, or industrial telemetry devices is permitted without an executed commercial licensing agreement signed by the Author.
+
+### 4. MANDATORY ATTRIBUTION & CITATION
+Any permitted citation, academic reference, or scholarly discussion of the engineering findings, CAN matrix architecture, or dynamic models must provide full and prominent attribution to:
+* **Author:** RATHLAVATH NAVEEN
+* **Title:** K15B Engine CAN Telemetry Emulator & Smart Hybrid (SHVS) Digital Twin
+* **Repository:** [https://github.com/naveen12005/k15b-can-telemetry-emulator](https://github.com/naveen12005/k15b-can-telemetry-emulator)
+* **Contact:** [rathlavathnaveen90@gmail.com](mailto:rathlavathnaveen90@gmail.com)
+
+### 5. DISCLAIMER OF WARRANTY
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS WORK.
